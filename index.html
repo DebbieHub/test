@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js defer"></script>
+</head>
+<body>
+    <center><h1>Student Records</h1></center>
+
+    <table>
+        <tr>
+            <td>
+                <form>
+                    <h2>Student Form</h2>
+                    <div>
+                        <label>Full Name</label>
+                        <label class="validaion-error hide" id="userNamevalidationError">This
+                             field is empty</label>
+                        <input type="text"  name="Username" id="UserName" placeholder="Enter the username">          
+                    </div>
+                    <div>
+                        <label>Roll No</label>
+                        <label class="validaion-error hide" id="rollNovalidationError">This
+                             field is required</label>
+                        <input type="number" name="rollNo" id="rollNo" placeholder="Enter the roll number">          
+                    </div>
+                    <div>
+                        <label>Student Class</label>
+                        <label class="validaion-error hide" id="stdClassvalidationError">This
+                             field is required</label>
+                        <input type="text" name="stdClass" id="stdClass" placeholder="Enter the Student Class">          
+                    </div>
+                    <div>
+                        <label>Total Subjects</label>
+                        <label class="validaion-error hide" id="tsuvalidationError">This
+                             field is required</label>
+                        <input type="text" name="tsub" id="tsub" placeholder="Enter the total Subject">          
+                    </div>
+                
+                     <div>
+                        <label>Age</label>
+                        <label class="validaion-error hide" id="agevalidationError">This
+                             field is required</label>
+                        <input type="number" name="age" id="age" placeholder="Enter the student's age">          
+                        </div>
+
+                        <div>
+                            <div class="form-action-button"></div>
+                           <center> <input type="submit" value="Submit"></center>
+                        </div>
+                               
+                </form>
+    
+                 <td class="debbie">
+                  <table>
+                     <thead>
+                        <tr id="ife">
+                                <th>Full Name</th>
+                                <th>Roll no</th>
+                                <th>Class</th>
+                                <th>Total Subject</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
