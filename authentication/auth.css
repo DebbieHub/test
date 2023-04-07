@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: skyblue;
+}
+.formWrap{
+    display: grid;
+    place-items: center;
+    margin: auto;
+    padding-top: 5em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 1em;
+    background-color: white;
+    padding: 5em 2em 5em 2em;
+}
+input{
+    padding: 1em;
+    border-radius: 30px;
+    border: 1px solid grey;
+}

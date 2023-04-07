@@ -1,91 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js defer"></script>
-</head>
-<body>
-    <center><h1>Student Records</h1></center>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Deborah Oguntayo" />
+    <meta
+      name="description"
+      content="Study Tracker is a web application that help students track their study process"
+    />
+    <meta name="keyword" content=" study, school, exam, progress" />
+    <link rel="icon" href="/assets/images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Study Tracker</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-name">
+        <img src="/assets/images/logo.jpg" alt="logo" width="60" height="60" />
+        <h1>Study <b style="color: skyblue">Tracker</b></h1>
+      </div>
+      <div class="menu-cont">
+        <button id="btn-menu" onclick="handleClick()">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </div>
+      <ul id="headList">
+        <li>
+          <a href="/index.html">Home</a>
+        </li>
+        <li>
+          <a href="#about" id="aboutLink">About</a>
+        </li>
+        <li>
+          <a href="#features" id="featureLink">Features</a>
+        </li>
+        <li>
+         <a href="/authentication/login.html"><button>Login</button></a> 
+        </li>
+      </ul>
+    </header>
 
-    <table>
-        <tr>
-            <td>
-                <form>
-                    <h2>Student Form</h2>
-                    <div>
-                        <label>Full Name</label>
-                        <label class="validaion-error hide" id="userNamevalidationError">This
-                             field is empty</label>
-                        <input type="text"  name="Username" id="UserName" placeholder="Enter the username">          
-                    </div>
-                    <div>
-                        <label>Roll No</label>
-                        <label class="validaion-error hide" id="rollNovalidationError">This
-                             field is required</label>
-                        <input type="number" name="rollNo" id="rollNo" placeholder="Enter the roll number">          
-                    </div>
-                    <div>
-                        <label>Student Class</label>
-                        <label class="validaion-error hide" id="stdClassvalidationError">This
-                             field is required</label>
-                        <input type="text" name="stdClass" id="stdClass" placeholder="Enter the Student Class">          
-                    </div>
-                    <div>
-                        <label>Total Subjects</label>
-                        <label class="validaion-error hide" id="tsuvalidationError">This
-                             field is required</label>
-                        <input type="text" name="tsub" id="tsub" placeholder="Enter the total Subject">          
-                    </div>
-                
-                     <div>
-                        <label>Age</label>
-                        <label class="validaion-error hide" id="agevalidationError">This
-                             field is required</label>
-                        <input type="number" name="age" id="age" placeholder="Enter the student's age">          
-                        </div>
+    <main>
+      <section class="hero-section">
+        <h1>
+          Track Your <b style="color: white">Study</b><br />
+          Progress
+        </h1>
+        <br />
+        <p>
+          With our study tracker, you can easily keep track of your study <br />
+          sessions and monitor your progress.
+        </p>
+        <br />
+        <a href="/authentication/signup.html"><button id="btn-gs">Get Started</button></a>
+      </section>
 
-                        <div>
-                            <div class="form-action-button"></div>
-                           <center> <input type="submit" value="Submit"></center>
-                        </div>
-                               
-                </form>
-    
-                 <td class="debbie">
-                  <table>
-                     <thead>
-                        <tr id="ife">
-                                <th>Full Name</th>
-                                <th>Roll no</th>
-                                <th>Class</th>
-                                <th>Total Subject</th>
-                                <th>Age</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </td>
-            </td>
-        </tr>
-    </table>
-    <script src="script.js"></script>
-</body>
+      <section class="about-us" data-scroll>
+        <div id="about">
+        <h1>ABOUT US</h1>
+        <div class="homeSection-one">
+
+          <div class="about-us-context">
+            <p>
+              At Study Tracker, we understand that managing your studies can be
+              a daunting task. With so many assignments, exams, and deadlines to
+              keep track of, it's easy to feel overwhelmed and stressed out.
+              That's why we created <b>Study Tracker</b> - an application designed to
+              help students stay organized, manage their schedules, and achieve
+              their <b>academic goals</b>. Our mission is to empower students to take
+              control of their education and succeed in their academic pursuits.
+              We believe that every student has the potential to achieve
+              greatness, and we want to help them unlock that potential by
+              providing them with the tools and resources they need to succeed.
+              With Study Tracker, students can easily manage their study
+              schedule, track their progress, and stay on top of their
+              assignments and deadlines. Our application allows students to set
+              reminders for upcoming exams and assignments, track their grades
+              and attendance, and monitor their progress over time. With our
+              user-friendly interface and intuitive design, students can easily
+              stay organized and focused on their studies.
+
+              <br>
+              <br>
+              <p>Thank you for choosing <b>Study Tracker</b> - we look forward to helping 
+                you achieve your academic goals!</p>
+            </p>
+          </div>
+
+          <div class="about-us-image">
+            <img
+            src="/assets/images/study.png"
+              alt="illustration"
+            />
+          </div>
+        </div>
+    </div>
+      </section>
+
+      <section id="features" data-scroll>
+        <h1>FEATURES</h1>
+        <div class="feature-items">
+            <div class="feature">
+                <span class="material-symbols-outlined feature-icon">
+                    bookmark_manager
+                    </span>
+                 
+                <h3>Schedule Management</h3>
+
+                <div>
+                    <p>Allows students to manage their study 
+                        schedule by organizing study sessions, 
+                        assignments, and reminders.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="material-symbols-outlined feature-icon">
+                    insights
+                    </span>
+                <h3>Progress Tracking</h3>
+                <div>
+                    <p>Helps students track their academic
+                         progress by setting study goals and
+                          tracking their progress towards them.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="material-symbols-outlined feature-icon">
+                    notifications
+                    </span>
+                <h3>Remainder Notifications</h3>
+                <div>
+                    <p>Sends students notifications or
+                         reminders about upcoming exams,
+                          assignments, or study sessions.</p>
+                </div>
+            </div>
+        
+            <div class="feature">
+                <span class="material-symbols-outlined feature-icon">
+                    view_timeline
+                    </span>
+                <h3>Attendance Tracking</h3>
+                <div>
+                    <p>Allows students to track their attendance for classes or study sessions.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <span class="material-symbols-outlined feature-icon">
+                    leaderboard
+                    </span>
+                <h3>Grade Tracking</h3>
+                <div>
+                    <p>Helps students track their academic performance 
+                        by allowing them to input and monitor their grades 
+                        for individual assignments or courses.</p>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="homeFooter">
+      <p>&copy; 2023 Study Tracker. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

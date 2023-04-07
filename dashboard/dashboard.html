@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Record</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 style="text-align: center">Student Records</h1>
+    <div class="container">
+      <div class="section-one">
+      <form id="myForm">
+        <!-- <h2>Student Form</h2> -->
+        <div>
+          <label>First Name:</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Enter the username"
+            
+          />
+          <p id="fnValid" class="validation"></p>
+        </div>
+        <div>
+          <label>Last Name:</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Enter the username"
+          />
+          <p id="lnValid" class="validation"></p>
+        </div>
+        <div>
+          <label>Roll No:</label>
+
+          <input
+            type="number"
+            name="rollNo"
+            id="rollNo"
+            placeholder="Enter the roll number"
+          />
+          <p id="rollNoValid" class="validation"></p>
+        </div>
+        <div>
+          <label>Student Class:</label>
+
+          <input
+            type="text"
+            name="stdClass"
+            id="stdClass"
+            placeholder="Enter the Student Class"
+          />
+          <p id="scValid" class="validation"></p>
+        </div>
+        <div>
+          <label>Total Subjects:</label>
+
+          <input
+            type="text"
+            name="tsub"
+            id="tsub"
+            placeholder="Enter the total Subject"
+          />
+          <p id="tsValid" class="validation"></p>
+        </div>
+
+        <div>
+          <label>Age:</label>
+
+          <input
+            type="number"
+            name="age"
+            id="age"
+            placeholder="Enter the student's age"
+          />
+          <p id="ageValid" class="validation"></p>
+        </div>
+
+        <div>
+          <div class="form-action-button"></div>
+          <button type="submit" id="btn-submit">SAVE</button>
+        </div>
+      </form>
+    </div>
+<div class="section-two">
+      <table id="myTable">
+        <thead>
+          <tr id="ife">
+            <th>Full Name</th>
+            <th>Roll no</th>
+            <th>Class</th>
+            <th>Total Subject</th>
+            <th>Age</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>h1</td>
+            <td>h1</td>
+            <td>h1</td>
+            <td>h1</td>
+            <td>h1</td>
+            <td>h1</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </body>
+</html>
