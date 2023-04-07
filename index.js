@@ -30,6 +30,6 @@ const handleClick = () => {
     featureElement.scrollIntoView({
       behavior: "smooth",
     });
-    handleClick(); // hide navbar when link clicked
+
   });
   

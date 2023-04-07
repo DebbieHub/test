@@ -1,0 +1,17 @@
+{
+  "name": "ifeoluwa",
+  "version": "1.0.0",
+  "description": "Study Tracker is a web application that help students track their study process",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "study",
+    "school",
+    "exam",
+    "progress"
+  ],
+  "author": "Deborah Oguntayo",
+  "license": "ISC"
+}

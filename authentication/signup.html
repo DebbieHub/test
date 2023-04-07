@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Tracker | Registration</title>
-    <link rel="stylesheet" href="/authentication/auth.css"/>
+    <link rel="stylesheet" href="/authentication/auth.css" />
     <link rel="icon" href="/assets/images/logo.jpg" />
-
-</head>
-<body>
-    <h1>Create a New Account</h1>
-
-    <form>
-        <input type="text" name="fname" placeholder="Enter First Name"/>
-        <input type="text" name="lname" placeholder="Enter Last Name"/>
-        <input type="email" name="email" placeholder="Enter Your E-mail Address"/>
-        <input type="password" name="password" placeholder="Use a Strong Password"/>
+  </head>
+  <body>
+    <div
+      style="display: flex; justify-content: flex-end; padding: 2em 2em 0em 0em"
+    >
+      <a href="/index.html">Go home</a>
+    </div>
+    <div class="formWrap">
+      <form>
+        <h3>Create a New Account</h3>
+        <input type="text" name="fname" placeholder="Enter First Name" />
+        <input type="text" name="lname" placeholder="Enter Last Name" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Your E-mail Address"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Use a Strong Password"
+        />
         <button>Create Account</button>
 
-        <div>
-            <p>Already have an account?</p>
-            <a href="login.html"><p>Login HERE</p></a>
+        <div class="nav-auth">
+          <p style="color: rgb(53, 52, 52)">Already have an account?</p>
+          <a href="/authentication/login.html">Login HERE</a>
         </div>
-    </form>
-</body>
+      </form>
+    </div>
+  </body>
 </html>

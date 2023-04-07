@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+h3{
+    color: rgb(53, 52, 52);
+}
 body{
     background-color: skyblue;
 }
@@ -9,19 +12,54 @@ body{
     display: grid;
     place-items: center;
     margin: auto;
-    padding-top: 5em;
+    padding-top: 3em;
 }
 form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     place-items: center;
-    gap: 1em;
+    gap: 2em;
     background-color: white;
+    border-radius: 15px;
     padding: 5em 2em 5em 2em;
 }
 input{
     padding: 1em;
     border-radius: 30px;
     border: 1px solid grey;
+    width: 80%;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.btn-wrap{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+button{
+    border-radius: 15px;
+    width: 50%;
+    border: none;
+    background-color: rgb(70, 76, 80);
+    padding: 0.7em;
+    color: white;
+    font-weight: 600;
+}
+button:hover{
+    background-color: rgb(53, 52, 52);
+    transition: 0.5s ease-in-out;
+    transform: scale(1.05) !important;
+    cursor: pointer;
+}
+.nav-auth{
+    display: flex;
+    gap: 2em;
+    font-size: 13px;
+}
+.nav-auth a{
+    color: rgb(6, 87, 119);
+    text-decoration: none;
+    font-weight: 900;
 }
