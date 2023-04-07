@@ -7,6 +7,10 @@
     <title>Study Tracker | Registration</title>
     <link rel="stylesheet" href="/authentication/auth.css" />
     <link rel="icon" href="/assets/images/logo.jpg" />
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+    <script src="/authentication/auth.js" defer></script>
   </head>
   <body>
     <div
@@ -15,29 +19,34 @@
       <a href="/index.html">Go home</a>
     </div>
     <div class="formWrap">
-      <form>
+      <form id="login-form">
         <h3>Welcome! Login To Get Started</h3>
         <input
           type="email"
           name="email"
+          id="email"
           placeholder="Enter Your E-mail Address"
+          required
         />
         <input
           type="password"
+          id="password"
           name="password"
           placeholder="Enter Your Password"
+          required
         />
         <div class="btn-wrap">
-          <button>Login</button>
+          <button type="submit">Login</button>
         </div>
 
         <div class="nav-auth">
           <p style="color: rgb(53, 52, 52)">New here?</p>
           <a href="/authentication/signup.html"
-            ><p>click <b>HERE</b> to create an account</p></a
+            ><p>create <b>NEW</b> account</p></a
           >
         </div>
       </form>
     </div>
+
   </body>
 </html>

@@ -7,6 +7,10 @@
     <title>Study Tracker | Registration</title>
     <link rel="stylesheet" href="/authentication/auth.css" />
     <link rel="icon" href="/assets/images/logo.jpg" />
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
+    <script src="/authentication/auth.js" defer></script>
   </head>
   <body>
     <div
@@ -15,21 +19,25 @@
       <a href="/index.html">Go home</a>
     </div>
     <div class="formWrap">
-      <form>
+      <form id="register-form">
         <h3>Create a New Account</h3>
-        <input type="text" name="fname" placeholder="Enter First Name" />
-        <input type="text" name="lname" placeholder="Enter Last Name" />
+        <input type="text" name="fname" placeholder="Enter First Name" id="firstname" required/>
+        <input type="text" name="lname" placeholder="Enter Last Name"  id="lastname" required/>
         <input
           type="email"
           name="email"
           placeholder="Enter Your E-mail Address"
+          id="email"
+          required
         />
         <input
           type="password"
           name="password"
           placeholder="Use a Strong Password"
+          id="password"
+          required
         />
-        <button>Create Account</button>
+        <button type="submit">Create Account</button>
 
         <div class="nav-auth">
           <p style="color: rgb(53, 52, 52)">Already have an account?</p>
@@ -37,5 +45,6 @@
         </div>
       </form>
     </div>
+
   </body>
 </html>

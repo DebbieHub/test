@@ -1,116 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Record</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <h1 style="text-align: center">Student Records</h1>
-    <div class="container">
-      <div class="section-one">
-      <form id="myForm">
-        <!-- <h2>Student Form</h2> -->
-        <div>
-          <label>First Name:</label>
-          <input
-            type="text"
-            name="firstname"
-            id="firstname"
-            placeholder="Enter the username"
-            
-          />
-          <p id="fnValid" class="validation"></p>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dashboard.css"/>
+  <title>Study Tracker</title>
+</head>
+<body>
+      <header>
+        <div class="navbar">
+          <div class="logo--name">
+            <a href="index.html" style="color: rgb(53, 52, 52); text-decoration: none;">
+              <img src="/assets/images/logo.jpg" alt="logo" width="60" height="60" />
+              <h1>Study <b style="color: skyblue">Tracker</b></h1>
+            </a>
+          </div>
+          <div class="nav-links">
+            <nav>
+              <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Schedule Management</a></li>
+                <li><a href="#">Tracking</a></li>
+                <li><a href="#">Remainder Notifications</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
-        <div>
-          <label>Last Name:</label>
-          <input
-            type="text"
-            name="lastname"
-            id="lastname"
-            placeholder="Enter the username"
-          />
-          <p id="lnValid" class="validation"></p>
+      </header>
+    
+      <div class="container">
+        <div class="sidebar">
+          <nav>
+            <ul>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Schedule Management</a></li>
+              <li><a href="#">Tracking</a></li>
+              <li><a href="#">Remainder Notifications</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </nav>
         </div>
-        <div>
-          <label>Roll No:</label>
+    
+        <main>
+          <section class="welcome">
+            <h1>Welcome, John!</h1>
+          </section>
+    
+          <section class="tasks">
+            <h2>Upcoming tasks:</h2>
+            <ul>
+              <li>Study session: Math, April 8, 9am-11am</li>
+              <li>Assignment: English Essay, Due April 10</li>
+              <li>Exam: Science, April 12, 1pm-3pm</li>
+            </ul>
+          </section>
+    
+          <section class="quick-actions">
+            <h2>Quick actions:</h2>
+            <ul>
+              <li><a href="#">Add study session</a></li>
+              <li><a href="#">Add assignment</a></li>
+              <li><a href="#">Add exam</a></li>
+            </ul>
+          </section>
+    
+          <section class="progress">
+            <h2>Progress tracking:</h2>
+            <ul>
+              <li>Progress towards goals</li>
+              <li>Grade average</li>
+            </ul>
+          </section>
+    
+          <section class="attendance">
+            <h2>Attendance tracking:</h2>
+            <ul>
+              <li>Current attendance rate</li>
+              <li>Calendar view</li>
+            </ul>
+          </section>
+    
+          <section class="grades">
+            <h2>Grade tracking:</h2>
+            <ul>
+              <li>Grade overview</li>
+              <li>Course breakdown</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    
+      <footer>
+        <p>© 2023 Study Tracker    
+	</footer>
 
-          <input
-            type="number"
-            name="rollNo"
-            id="rollNo"
-            placeholder="Enter the roll number"
-          />
-          <p id="rollNoValid" class="validation"></p>
-        </div>
-        <div>
-          <label>Student Class:</label>
-
-          <input
-            type="text"
-            name="stdClass"
-            id="stdClass"
-            placeholder="Enter the Student Class"
-          />
-          <p id="scValid" class="validation"></p>
-        </div>
-        <div>
-          <label>Total Subjects:</label>
-
-          <input
-            type="text"
-            name="tsub"
-            id="tsub"
-            placeholder="Enter the total Subject"
-          />
-          <p id="tsValid" class="validation"></p>
-        </div>
-
-        <div>
-          <label>Age:</label>
-
-          <input
-            type="number"
-            name="age"
-            id="age"
-            placeholder="Enter the student's age"
-          />
-          <p id="ageValid" class="validation"></p>
-        </div>
-
-        <div>
-          <div class="form-action-button"></div>
-          <button type="submit" id="btn-submit">SAVE</button>
-        </div>
-      </form>
-    </div>
-<div class="section-two">
-      <table id="myTable">
-        <thead>
-          <tr id="ife">
-            <th>Full Name</th>
-            <th>Roll no</th>
-            <th>Class</th>
-            <th>Total Subject</th>
-            <th>Age</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>h1</td>
-            <td>h1</td>
-            <td>h1</td>
-            <td>h1</td>
-            <td>h1</td>
-            <td>h1</td>
-
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    </div>
-  </body>
+</body>
 </html>
+
+
+
+
+

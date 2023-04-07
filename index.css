@@ -75,7 +75,7 @@ header button:hover {
  }
 #btn-gs{
     background-color: rgb(70, 76, 80);
-    padding: 0.8em;
+    padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
     border: none;
@@ -175,7 +175,8 @@ header button:hover {
   }
   
   header h1 {
-    font-size: 1.3em;
+    font-size: 1.4em;
+   
   }
   header ul {
     display: none;
@@ -188,6 +189,7 @@ header button:hover {
     text-align: center;
     padding-top: 2em;
     padding-bottom: 2em;
+    font-size: 18px;
 
   }
   header ul  a{
@@ -199,6 +201,14 @@ header ul  a:hover{
     text-decoration: none;
     color: skyblue;
     border-bottom: 5px solid skyblue;
+}
+header button {
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  background-color: skyblue;
+  color: whitesmoke;
+  cursor: pointer;
 }
   .menu-cont {
     display: grid;
