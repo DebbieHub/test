@@ -2,8 +2,8 @@
 
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
-import { getDatabase, set, ref, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword }from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+import { getDatabase, set, ref, get} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged}from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -75,6 +75,7 @@ onAuthStateChanged(auth, (user) => {
     // User is signed in
     const uid = user.uid;
     console.log("User is signed in with UID:", uid);
+  
     // ...
   } else {
     // User is signed out

@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dashboard.css"/>
-  <script src="dashboard.js" defer></script>
   <link rel="icon" href="/assets/images/logo.jpg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Study Tracker | Dashboard</title>
@@ -40,7 +39,7 @@
       <div class="container">
         <main>
           <section class="welcome">
-            <h1>Welcome, John!</h1>
+            <h1 id="welcome-message"></h1>
           </section>
     
           <section class="tasks">
@@ -92,9 +91,10 @@
 	</footer>
 
 </body>
+<script type="module" src="dashboard.js" defer></script>
 <script type="module" src="/authentication/authLogin.js"></script>
 <script type="module" src="/authentication/authLogout.js"></script>
-
+<script type="module" src="/authentication//authSignUp.js"></script>
 </html>
 
 
