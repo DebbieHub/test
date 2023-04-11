@@ -5,7 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dashboard.css"/>
-  <title>Study Tracker</title>
+  <script src="dashboard.js" defer></script>
+  <link rel="icon" href="/assets/images/logo.jpg" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>Study Tracker | Dashboard</title>
 </head>
 <body>
       <header>
@@ -13,36 +16,28 @@
           <div class="logo--name">
             <a href="/" style="color: rgb(53, 52, 52); text-decoration: none;">
               <img src="/assets/images/logo.jpg" alt="logo" width="60" height="60" />
-              <h1>Study <b style="color: skyblue">Tracker</b></h1>
+              <h1>Study <b style="color: rgb(27, 79, 99);">Tracker</b></h1>
             </a>
           </div>
-          <div class="nav-links">
-            <nav>
-              <ul>
+          <div class="menu-cont">
+            <button id="btn-menu" onclick="handleClick()">
+              <span class="material-symbols-outlined"> menu </span>
+            </button>
+            </div>
+              <ul id="headList">
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Schedule Management</a></li>
+                <li><a href="#">Make a schedule</a></li>
                 <li><a href="#">Tracking</a></li>
-                <li><a href="#">Remainder Notifications</a></li>
+                <li><span class="material-symbols-outlined">
+                  notifications
+                  </span>
+                  </li>
                 <li><button type="submit" id="logout-btn">Logout</button></li>
               </ul>
-            </nav>
-          </div>
         </div>
       </header>
     
       <div class="container">
-        <div class="sidebar">
-          <nav>
-            <ul>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Schedule Management</a></li>
-              <li><a href="#">Tracking</a></li>
-              <li><a href="#">Remainder Notifications</a></li>
-              <!-- <li><button type="submit" id="logout-btn">Logout</button></li> -->
-            </ul>
-          </nav>
-        </div>
-    
         <main>
           <section class="welcome">
             <h1>Welcome, John!</h1>

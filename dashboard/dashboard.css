@@ -10,23 +10,26 @@
   *:after {
     box-sizing: border-box;
   }
-  
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
   /* Style for the navbar */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1em;
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   /* Style for the logo and name */
-  .logo--name {
+ 
+  .logo--name a {
     display: flex;
     align-items: center;
+
   }
-  
   .logo--name img {
     margin-right: 10px;
     border-radius: 50%;
@@ -38,66 +41,41 @@
   }
   
   /* Style for the navigation links */
-  .nav-links ul {
+  header ul {
     display: flex;
     list-style: none;
+    align-items: center;
   }
   
-  .nav-links li {
+  header li {
     margin-right: 20px;
   }
   
-  .nav-links a {
-    color: #333;
+  header a {
+    color:  rgb(53, 52, 52);
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    transition: all 0.3s ease;
   }
   
-  .nav-links a:hover {
-    color: skyblue;
+  header a:hover {
+    color: rgb(27, 79, 99);
+    border-bottom: 4px solid rgb(27, 79, 99);;
+  }
+  header button{
+    padding: 0.7em;
+    background-color: rgb(27, 79, 99);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  header button:hover{
+    background-color: rgb(33, 93, 117);
   }
   
-  /* Style for the sidebar */
-  .sidebar {
-    background-color: #f7f7f7;
-    height: 100vh;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: -200px;
-    transition: all 0.3s ease;
-  }
-  
-  .sidebar nav {
-    padding-top: 20px;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-  }
-  
-  .sidebar li {
-    margin: 10px 0;
-  }
-  
-  .sidebar a {
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-  }
-  
-  .sidebar a:hover {
-    color: skyblue;
-  }
-  
-  /* Show sidebar on hover */
-  .container:hover .sidebar {
-    left: 0;
-  }
+  .menu-cont {
+  display: none;
+}
   
   /* Style for the main content */
   main {
@@ -163,5 +141,59 @@
     background-color: #4e92c4;
   }
   
-  /*
   
+  @media (max-width: 800px) {
+  header {
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+  }
+  
+  header h1 {
+    font-size: 1.4em;
+   
+  }
+  header ul {
+    display: none;
+    position: fixed;
+    background-color: rgb(53, 52, 52);
+    left: 0;
+    top: 5.1em;
+    height: 100vh;
+    width: 200px;
+    flex-direction: column;
+    padding-top: 5em;
+    gap: 2em;
+    padding-bottom: 2em;
+    font-size: 18px;
+    align-items: flex-start;
+    padding-left: 1em;
+  }
+  header ul  a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+header ul  a:hover{
+    text-decoration: none;
+    color: rgb(27, 79, 99);
+    border-bottom: 5px solid rgb(27, 79, 99);
+}
+header button {
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(27, 79, 99);
+  color: whitesmoke;
+  cursor: pointer;
+}
+  .menu-cont {
+    display: grid;
+   margin-right: 2em;
+  }
+  #btn-menu {
+    background-color: transparent;
+    color: rgb(53, 52, 52);
+  }
+}
