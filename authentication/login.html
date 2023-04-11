@@ -4,49 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study Tracker | Registration</title>
+    <title>Study Tracker | Login</title>
     <link rel="stylesheet" href="/authentication/auth.css" />
-    <link rel="icon" href="/assets/images/logo.jpg" />
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-    <script src="/authentication/auth.js" defer></script>
   </head>
   <body>
-    <div
-      style="display: flex; justify-content: flex-end; padding: 2em 2em 0em 0em"
-    >
-      <a href="/index.html">Go home</a>
-    </div>
-    <div class="formWrap">
-      <form id="login-form">
-        <h3>Welcome! Login To Get Started</h3>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter Your E-mail Address"
-          required
-        />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter Your Password"
-          required
-        />
-        <div class="btn-wrap">
-          <button type="submit">Login</button>
+    <div class="wrap">
+      <div class="formWrap">
+        <div
+          style="
+            display: flex;
+            justify-content: flex-end;
+            padding: 2em 2em 0em 0em;
+          "
+        >
+          <a href="/">Go home</a>
         </div>
+        <form id="login-form">
+          <h3>Welcome! Login To Get Started</h3>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your E-mail Address"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter Your Password"
+            required
+          />
+          <div class="btn-wrap">
+            <button type="submit" id="login-btn">Login</button>
+          </div>
 
-        <div class="nav-auth">
-          <p style="color: rgb(53, 52, 52)">New here?</p>
-          <a href="/authentication/signup.html"
-            ><p>create <b>NEW</b> account</p></a
-          >
-        </div>
-      </form>
+          <div class="nav-auth">
+            <p style="color: rgb(53, 52, 52)">New here?</p>
+            <a href="/authentication/signup.html"
+              ><p>create <b>NEW</b> account</p></a
+            >
+          </div>
+        </form>
+      </div>
+
+      <div class="image-cont">
+        <img src="/assets/images/studentLogin.jpeg" alt="Login image" />
+      </div>
     </div>
-
   </body>
-</html>
+  <script type="module" src="/authentication/authLogin.js"></script>
+  </html>

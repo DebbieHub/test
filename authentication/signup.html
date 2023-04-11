@@ -7,44 +7,65 @@
     <title>Study Tracker | Registration</title>
     <link rel="stylesheet" href="/authentication/auth.css" />
     <link rel="icon" href="/assets/images/logo.jpg" />
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth-compat.js"></script>
-    <script src="/authentication/auth.js" defer></script>
   </head>
   <body>
-    <div
-      style="display: flex; justify-content: flex-end; padding: 2em 2em 0em 0em"
-    >
-      <a href="/index.html">Go home</a>
-    </div>
-    <div class="formWrap">
-      <form id="register-form">
-        <h3>Create a New Account</h3>
-        <input type="text" name="fname" placeholder="Enter First Name" id="firstname" required/>
-        <input type="text" name="lname" placeholder="Enter Last Name"  id="lastname" required/>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter Your E-mail Address"
-          id="email"
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Use a Strong Password"
-          id="password"
-          required
-        />
-        <button type="submit">Create Account</button>
-
-        <div class="nav-auth">
-          <p style="color: rgb(53, 52, 52)">Already have an account?</p>
-          <a href="/authentication/login.html">Login HERE</a>
+    <div class="wrap">
+      <div class="formWrap">
+        <div
+          style="
+            display: flex;
+            justify-content: flex-end;
+            padding: 2em 2em 0em 0em;
+          "
+        >
+          <a href="/index.html">Go home</a>
         </div>
-      </form>
-    </div>
+        <form id="register-form">
+          <h3>CREATE A NEW ACCOUNT</h3>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Enter First Name"
+            id="firstname"
+            required
+          />
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Enter Last Name"
+            id="lastname"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your E-mail Address"
+            id="email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Use a Strong Password"
+            id="password"
+            required
+          />
+          <button type="submit" id="signUp">Create Account</button>
 
-  </body>
+          <div class="nav-auth">
+            <p style="color: rgb(53, 52, 52)">Already have an account?</p>
+            <a href="/authentication/login.html">Login HERE</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="image-cont">
+        <img src="/assets/images/studentSignup.jpeg" alt="Sign-up image" />
+      </div>
+    </div>
+</body>
+<!-- <script  src="/authentication/auth.js" defer></script> -->
+
+<script type="module" src="/authentication/authSignUp.js"></script>
+
 </html>

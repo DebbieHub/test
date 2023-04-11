@@ -11,7 +11,7 @@
       <header>
         <div class="navbar">
           <div class="logo--name">
-            <a href="index.html" style="color: rgb(53, 52, 52); text-decoration: none;">
+            <a href="/" style="color: rgb(53, 52, 52); text-decoration: none;">
               <img src="/assets/images/logo.jpg" alt="logo" width="60" height="60" />
               <h1>Study <b style="color: skyblue">Tracker</b></h1>
             </a>
@@ -23,7 +23,7 @@
                 <li><a href="#">Schedule Management</a></li>
                 <li><a href="#">Tracking</a></li>
                 <li><a href="#">Remainder Notifications</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><button type="submit" id="logout-btn">Logout</button></li>
               </ul>
             </nav>
           </div>
@@ -38,7 +38,7 @@
               <li><a href="#">Schedule Management</a></li>
               <li><a href="#">Tracking</a></li>
               <li><a href="#">Remainder Notifications</a></li>
-              <li><a href="#">Logout</a></li>
+              <!-- <li><button type="submit" id="logout-btn">Logout</button></li> -->
             </ul>
           </nav>
         </div>
@@ -97,6 +97,9 @@
 	</footer>
 
 </body>
+<script type="module" src="/authentication/authLogin.js"></script>
+<script type="module" src="/authentication/authLogout.js"></script>
+
 </html>
 
 
