@@ -1,157 +1,529 @@
 /* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 1em;
+  background-color: rgb(209, 208, 208);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the logo and name */
+
+.logo--name a {
+  display: flex;
+  align-items: center;
+}
+.logo--name img {
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo--name h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Style for the navigation links */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  flex: 0.2;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding-top: 5em;
+  padding-left: 1em;
+  font-weight: 500;
+}
+
+header li {
+  margin-right: 20px;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  color: rgb(53, 52, 52);
+  font-weight: 600;
+}
+
+header a {
+  color: rgb(53, 52, 52);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header a:hover {
+  color: rgb(27, 79, 99);
+}
+header #logout-btn {
+  padding: 0.7em;
+  width: 120px;
+  background-color: rgb(27, 79, 99);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10em;
+  border-radius: 5px;
+}
+header #logout-btn:hover {
+  background-color: rgb(33, 93, 117);
+}
+
+.menu-cont {
+  display: none;
+}
+.icon {
+  cursor: pointer;
+}
+.icon:hover{
+  color: #333;
+  transition: 0.5s;
+  font-size: 50px;
+
+}
+/* Style for the main content */
+main {
+  flex: 0.8;
+  background-color: white;
+  padding-left: 3em;
+  padding-right: 3em;
+  width: 100%;
+}
+
+/* Style for the welcome section */
+.welcome {
+  margin: 3em 0em 1em 0em;
+  width: 500px;
+  font-size: 2em;
+  background-color: #969292;
+  padding: 0.7em 0em 0.7em 0em;
+  color: white;
+  border: 5px solid rgb(116, 114, 114);
+  display: grid;
+  align-items: center;
+  align-content: center;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.welcome h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+/* Style for the tasks section */
+.tasks {
+  padding: 3em 0em 3em 0em;
+}
+table {
+  border-collapse: collapse;
+  overflow-x: scroll;
+  margin-top: 3em;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/* mmodal form */
+/* The modal (background) */
+.modal,
+.modalGrade {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content,
+.modal-grade-content {
+  background-color: #fefefe;
+  border-radius: 15px;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+}
+.modal-content label,
+.modal-grade-content label{
+  font-weight: 600;
+}
+.modal-content input,
+.modal-grade-content input {
+  padding: 0.7em;
+  width: 180px;
+  border: 1px solid gray;
+  outline: #333;
+}
+.form-button{
+  display: flex;
+  justify-content: flex-end;
+}
+.form-button button{
+  width: 100px;
+  padding: 0.6em;
+  border-radius: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.form-button button:hover{
+  background-color: green;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style for the quick actions section */
+
+.action--cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+  justify-content: center;
+  place-items: center;
+  align-items: center;
+  padding: 3em 0em 3em 0em;
+}
+.create--action,
+.grade--action {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.4em;
+  border-radius: 25px;
+}
+.red {
+  background-color: rgba(216, 9, 9, 0.9);
+}
+.green {
+  background-color: rgba(15, 133, 15, 0.829);
+}
+.yellow {
+  background-color: goldenrod;
+}
+.blue{
+  background-color: blue;
+}
+.progress {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.progress h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.progress ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.progress li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.progress li:last-child {
+  border-bottom: none;
+}
+
+.progress .label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.progress .value {
+  font-weight: normal;
+}
+
+.attendance {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.attendance h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.attendance table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.attendance th,
+.attendance td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.attendance th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.attendance td.present {
+  background-color: #c6efce;
+}
+
+.attendance td.absent {
+  background-color: #ffcccc;
+}
+
+.attendance td.late {
+  background-color: #ffebcc;
+}
+
+.attendance td.unknown {
+  background-color: #f2f2f2;
+}
+
+.attendance td:before {
+  font-family: "Material Symbols Outlined", sans-serif;
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.attendance td.present:before {
+  content: "done";
+  color: #4caf50;
+}
+
+.attendance td.absent:before {
+  content: "clear";
+  color: #f44336;
+}
+
+.attendance td.late:before {
+  content: "schedule";
+  color: #ffa726;
+}
+
+.attendance td.unknown:before {
+  content: "help_outline";
+  color: #757575;
+}
+
+.attendance-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.attendance-rate {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.attendance-label {
+  margin: 10px 0 0 0;
+  font-size: 18px;
+  color: #555;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.btn-prev,
+.btn-next {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.calendar-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.grades {
+  margin-top: 30px;
+}
+
+.grades h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.grades table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  overflow-x: scroll;
+  display: block;
+}
+ 
+.grades table th,
+.grades table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.grades th{
+  width: 100%;
+
+}
+
+.grades table th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.grades table td:first-child {
+  text-align: left;
+}
+
+.grades table td:last-child {
+  font-weight: bold;
+}
+
+.grades table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.grades table tr:hover {
+  background-color: #e6f7ff;
+}
+.schedule-section {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.schedule-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.schedule-section table {
+  border-collapse: collapse;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* optional: adds momentum scrolling on iOS */
+  display: block;
+  width: 100%;
+
+}
+
+.schedule-section th, 
+.schedule-section td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+
+}
+
+
+.schedule-section th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  width: 100%;
+
+}
+
+@media (max-width: 800px) {
+  body {
+    display: block;
+
   }
-  
-  /* Set box-sizing to border-box for easier sizing */
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-  }
-  body{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  /* Style for the navbar */
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
   }
-  
-  /* Style for the logo and name */
- 
-  .logo--name a {
-    display: flex;
-    align-items: center;
-
-  }
-  .logo--name img {
-    margin-right: 10px;
-    border-radius: 50%;
-  }
-  
-  .logo--name h1 {
-    font-size: 24px;
-    font-weight: 600;
-  }
-  
-  /* Style for the navigation links */
-  header ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  
-  header li {
-    margin-right: 20px;
-  }
-  
-  header a {
-    color:  rgb(53, 52, 52);
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  header a:hover {
-    color: rgb(27, 79, 99);
-    border-bottom: 4px solid rgb(27, 79, 99);;
-  }
-  header button{
-    padding: 0.7em;
-    background-color: rgb(27, 79, 99);
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  header button:hover{
-    background-color: rgb(33, 93, 117);
-  }
-  
-  .menu-cont {
-  display: none;
-}
-  
-  /* Style for the main content */
-  main {
-    margin-left: 200px;
-    padding: 20px;
-  }
-  
-  /* Style for the welcome section */
-  .welcome {
-    margin-bottom: 40px;
-  }
-  
-  .welcome h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  /* Style for the tasks section */
-  .tasks h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .tasks ul {
-    list-style: none;
-    margin-left: 20px;
-  }
-  
-  .tasks li {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style for the quick actions section */
-  .quick-actions h2 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .quick-actions ul {
-    list-style: none;
-    margin-left: 20px;
-  }
-  
-  .quick-actions li {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .quick-actions a {
-    display: inline-block;
-    background-color: skyblue;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .quick-actions a:hover {
-    background-color: #4e92c4;
-  }
-  
-  
-  @media (max-width: 800px) {
   header {
     justify-content: space-between;
     width: 100%;
-    position: fixed;
+    height: auto;
   }
-  
+
   header h1 {
-    font-size: 1.4em;
-   
+    font-size: 1.2em;
   }
   header ul {
     display: none;
@@ -169,31 +541,58 @@
     align-items: flex-start;
     padding-left: 1em;
   }
-  header ul  a{
+  header ul a {
     font-size: 18px;
     text-decoration: none;
     color: white;
     font-weight: 500;
-}
-header ul  a:hover{
+  }
+  header ul a:hover {
     text-decoration: none;
     color: rgb(27, 79, 99);
     border-bottom: 5px solid rgb(27, 79, 99);
-}
-header button {
-  padding: 1em;
-  border: none;
-  border-radius: 3px;
-  background-color: rgb(27, 79, 99);
-  color: whitesmoke;
-  cursor: pointer;
-}
+  }
+  header #logout-btn {
+    padding: 1em;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(27, 79, 99);
+    color: whitesmoke;
+    cursor: pointer;
+  }
   .menu-cont {
-    display: grid;
-   margin-right: 2em;
+    display: block;
+    margin-right: 2em;
   }
   #btn-menu {
+    border: none;
     background-color: transparent;
-    color: rgb(53, 52, 52);
+  }
+  .welcome {
+    width: 300px;
+    margin: 3em 0em 0em 0em;
+    font-size: 1.7em;
+ 
+
+  }
+  .welcome h1 {
+    font-size: 1em;
+  }
+  main {
+    padding: 0em 0em 0em 0em;
+
+  }
+  .welcome,
+  .tasks,
+  .quick-actions,
+  .progress,
+  .attendance,
+  .grades,
+  .schedule-section {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+  .icon {
+    color: white;
   }
 }
