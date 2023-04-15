@@ -65,6 +65,7 @@ onAuthStateChanged(auth, (user) => {
     // ...
   } else {
     // User is signed out
+    // window.location.href = "/authentication/login.html";
     // ...
   }
 });

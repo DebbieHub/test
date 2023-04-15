@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Study Tracker</title>
+    <link rel="stylesheet" href="/authentication/auth.css" />
+    <link rel="icon" href="/assets/images/logo.jpg" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="formWrap">
+        <div
+          style="
+            display: flex;
+            justify-content: flex-end;
+            padding: 2em 2em 0em 0em;
+          "
+        >
+          <a
+            href="/index.html"
+            style="
+              text-decoration: none;
+              color: rgb(67, 63, 63);
+              font-weight: 700;
+              font-size: 2em;
+            "
+          >
+            <span class="close">&#8592;</span>
+          </a>
+        </div>
+        <form id="login-form">
+          <h3>Welcome! Admin Login To Get Started</h3>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter Your E-mail Address"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter Your Password"
+            required
+          />
+          <div class="btn-wrap">
+            <button type="submit" id="login-btn">Login</button>
+          </div>
+          <p><a href="/authentication/reset-password.html" style=" color: gray;">Forgot password?</a></p>
+
+          <div class="nav-auth">
+            
+            <p style="color: rgb(53, 52, 52)">Not an admin?</p>
+            <a href="/authentication/login.html"
+              ><p>Login as <b>USER</b></p></a
+            >
+          </div>
+        </form>
+      </div>
+
+      <div class="image-cont">
+        <img src="/assets/images/adminLogin.jpeg" alt="Login image" />
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/authentication/authAdminLogin.js"></script>
+</html>

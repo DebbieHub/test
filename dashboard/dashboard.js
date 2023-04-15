@@ -112,6 +112,14 @@ auth.onAuthStateChanged(() => {
         const averageScore = totalScore / numScores; // calculate average score
         document.getElementById("averageScore").textContent = averageScore.toFixed(2)+"%";
 
+        const scoreRef = ref(database, "users/" + user.uid + "/averageScore");
+        set(scoreRef, averageScore)
+          .then(() => {
+            console.log("Average score saved to database");
+          })
+          .catch((error) => {
+            console.error("Error saving average score to database:", error);
+          });
         let grade;
 
         switch (true) {
@@ -133,8 +141,17 @@ auth.onAuthStateChanged(() => {
           default: 
           grade = "F";
         }
+        document.getElementById("averageGrade").textContent = grade;
 
-      document.getElementById("averageGrade").textContent = grade;
+        const userRef = ref(database, "users/" + user.uid + "/averageGrade");
+        set(userRef, grade)
+          .then(() => {
+            console.log("Average grade saved to database");
+          })
+          .catch((error) => {
+            console.error("Error saving average grade to database:", error);
+          });
+        
   
       })
       .catch((error) => {
@@ -550,14 +567,3 @@ updateCalendar();
 
 
 
-const navLinks = document.querySelectorAll('header ul li a');
-
-for (const link of navLinks) {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const targetId = link.getAttribute('href');
-    document.querySelector(targetId).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-}

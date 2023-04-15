@@ -110,7 +110,11 @@ function generateCalendar(month, year) {
         const totalDays = document.querySelectorAll(".calendar-day").length;
         const percentage = Math.round((presentDays / totalDays) * 100);
         attendanceRate.innerText = `${percentage}%`;
+        
       });
+
+
+
 
       day.addEventListener("click", (event) => {
         const clickedDay = event.target;
@@ -198,7 +202,7 @@ onAuthStateChanged(auth, user => {
       currentUser = user;
       // Reference the attendance node for the current user
       const attendanceRef = ref(database, `users/${currentUser.uid}/attendance`);
-  
+     
       // Listen for changes in the attendance node
       onValue(attendanceRef, snapshot => {
         // Update the UI with the attendance data
@@ -206,7 +210,8 @@ onAuthStateChanged(auth, user => {
         const totalDays = document.querySelectorAll(".calendar-day").length;
         const percentage = Math.round((presentDays / totalDays) * 100);
         attendanceRate.innerText = `${percentage}%`;
-       
+        const attendanceRateRef = ref(database, "users/" + user.uid + "/percentage");
+       set(attendanceRateRef, percentage);
       });
     } else {
 
