@@ -308,13 +308,15 @@ tr:nth-child(even) {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 30px;
+
 }
 
 .attendance th,
 .attendance td {
   text-align: center;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid rgb(163, 162, 162);
+  cursor: pointer;
 }
 
 .attendance th {
@@ -326,13 +328,8 @@ tr:nth-child(even) {
   background-color: #c6efce;
 }
 
-.attendance td.absent {
-  background-color: #ffcccc;
-}
 
-.attendance td.late {
-  background-color: #ffebcc;
-}
+
 
 .attendance td.unknown {
   background-color: #f2f2f2;
@@ -349,21 +346,6 @@ tr:nth-child(even) {
 .attendance td.present:before {
   content: "done";
   color: #4caf50;
-}
-
-.attendance td.absent:before {
-  content: "clear";
-  color: #f44336;
-}
-
-.attendance td.late:before {
-  content: "schedule";
-  color: #ffa726;
-}
-
-.attendance td.unknown:before {
-  content: "help_outline";
-  color: #757575;
 }
 
 .attendance-summary {
@@ -498,10 +480,9 @@ tr:nth-child(even) {
 }
 
 
-.schedule-section th {
+.schedule-section td {
   background-color: #f2f2f2;
   font-weight: bold;
-  width: 100%;
 
 }
 
@@ -540,7 +521,8 @@ tr:nth-child(even) {
     font-size: 18px;
     align-items: flex-start;
     padding-left: 1em;
-  }
+    animation: menuSlide 0.9s;  
+ }
   header ul a {
     font-size: 18px;
     text-decoration: none;
@@ -594,5 +576,19 @@ tr:nth-child(even) {
   }
   .icon {
     color: white;
+  }
+  .attendance table{
+    display: block;
+  }
+
+  @keyframes menuSlide {
+
+    from{
+      left: -100%;
+    }
+    to{
+      left: 0%;
+    }
+    
   }
 }

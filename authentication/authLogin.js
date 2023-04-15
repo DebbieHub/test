@@ -61,12 +61,10 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is signed in
     const uid = user.uid;
-    window.location.href = "/dashboard/dashboard.html";
     console.log("User is signed in with UID:", uid);
     // ...
   } else {
     // User is signed out
-    console.log("User is signed out");
     // ...
   }
 });

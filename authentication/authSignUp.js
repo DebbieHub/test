@@ -35,6 +35,9 @@ e.preventDefault();
  var password = document.getElementById('password').value;
  var firstname = document.getElementById('firstname').value;
  var lastname = document.getElementById('lastname').value;
+
+
+ 
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
@@ -49,7 +52,6 @@ e.preventDefault();
     set(userRef, userData)
       .then(() => {
         console.log('User data saved successfully:', userData);
-        alert('User created!');
         window.location.href = "/authentication/login.html";
 
       })
@@ -57,7 +59,6 @@ e.preventDefault();
         console.error('Error saving user data:', error);
         alert('Error creating user!');
       });
-    alert('user created!');
 
     // ...
   })

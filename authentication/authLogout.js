@@ -32,7 +32,6 @@ logoutButton.addEventListener('click',(e) => {
     e.preventDefault();
     signOut(auth).then(() => {
         // Sign-out successful.
-        alert('user logged out');
         window.location.href = "/authentication/login.html";
 
       }).catch((error) => {

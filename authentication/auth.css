@@ -81,21 +81,24 @@ button:hover {
 }
 @media (max-width: 1024px) {
   h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    color: gray;
   }
   form {
-    padding: 5em 1em 5em 1em;
+    padding: 3em 1em 5em 1em;
     background-color: transparent;
+    gap: 2em;
 
   }
   .formWrap{
     background-size: cover; 
-    background-color: rgba(27, 79, 99, 0.726);
+    background-color: white;
+    padding-top: 1em;
  }
   .image-cont {
     display: none;
   }
- h3, .nav-auth a{
-    color: white;
+ .nav-auth a{
+    color:  red;
 }
 }
